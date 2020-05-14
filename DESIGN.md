@@ -26,7 +26,7 @@ The overall pipeline is as follows:
    * Arrow Format -> Raw Blocks -> Data Tables
 ```
 
-### Checkpoint Formatting
+### Checkpoint
 We decided to make use of the current ArrowSerializer to serialize data tables into arrow format files on disk. Specific file format is clarified in the ArrowSerializer class. Arrow serializer requires each block to be compacted and contain updated arrow metadata. Therefore, we pass each block through BlockCompactor before creating a checkpoint.
 
 ```
